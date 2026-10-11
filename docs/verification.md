@@ -32,6 +32,15 @@ The browser server uses port 3011 and the application's existing hostname bindin
 - The Humanizer pass reviewed the final text for marketing language and repetitive phrasing. Existing concrete first-person copy was preserved; the new availability messages use direct wording.
 - Screenshots of the rendered candidate were inspected, including the source note in English/Arabic on desktop/mobile and in the dark theme. Review artifacts are local and ignored, except the README preview.
 
+## Public-release verification — 11 October 2026
+
+- [Fresh Linux CI](https://github.com/AbdullahAlmahdi12/abd-portfolio-showcase/actions/runs/38150787702) passed on Node 22.23.3 and npm 10.9.9: lockfile installation, lint, typecheck, 3 content tests, production build, and all 21 browser tests.
+- Gitleaks found no detections in the sanitized release tree, its new Git history, or the CI log. No old font-containing commits were pushed into the replacement repository.
+- Public visibility and anonymous access were checked: the repository and raw README returned HTTP 200, and cloning without a credential helper succeeded.
+- Both old candidate commits, all five old Thmanyah blob IDs, and the five former raw font paths returned HTTP 404 through the new public repository.
+- The old candidate remains a separate private repository. Its anonymous API response was HTTP 404. Do not make that archive public: it retains the font-containing history for private preservation.
+- Local Thmanyah copies and old Git metadata are outside `public/` in ignored private storage. The original portfolio and its deployment remain unchanged. Local development and preview servers were stopped after verification.
+
 ## Dependency findings
 
 `npm audit --omit=dev` reported **0 vulnerabilities**. The full dependency audit reported **5 high-severity entries**, all in the development lint chain: `eslint-config-next` → `@next/eslint-plugin-next` → `fast-glob` → `micromatch` → `braces`.
@@ -44,7 +53,7 @@ These tools run against this repository's source and lint configuration, not vis
 
 - This public edition starts with unrelated Git history. The font-containing candidate is preserved separately and privately; deleting fonts only in a later commit or force-pushing that existing GitHub repository would not ensure old cached objects were unavailable.
 - Thmanyah is excluded, not converted or hotlinked. The [asset notes](assets.md) retain template/reference-media attribution and reuse limitations. Secret scanning does not establish copyright permission.
-- A GitHub Actions workflow is provided without an unverified passing badge. Its configuration alone does not prove a successful remote run.
+- Remote CI evidence above applies to the linked source revision; workflow configuration alone is not evidence of a passing run.
 - No new public deployment or deployment-source migration is claimed. Update the canonical origin and links only after the actual approved deployment exists.
 - Browser coverage is Chromium, not a claim of testing every browser or assistive technology. No Lighthouse score or performance improvement is claimed.
 - Upstream Geist and Noto license notices are preserved byte-for-byte, including their original trailing spaces; application and documentation changes pass Git's whitespace check.
