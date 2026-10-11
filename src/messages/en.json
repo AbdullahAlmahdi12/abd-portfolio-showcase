@@ -1,0 +1,102 @@
+{
+  "Navigation": {
+    "label": "Main navigation",
+    "home": "Home",
+    "portfolio": "Portfolio",
+    "contact": "Contact",
+    "openMenu": "Open navigation menu",
+    "closeMenu": "Close navigation menu",
+    "switchLanguage": "Switch to Arabic",
+    "skipContent": "Skip to content",
+    "social": "Social links"
+  },
+  "Footer": {
+    "invitation": "Let's talk",
+    "description": "Contact me about a front-end role or a project."
+  },
+  "Sections": {
+    "about": "About",
+    "skills": "Skills & Tools",
+    "portfolio": "Portfolio",
+    "history": "Work History",
+    "education": "Education",
+    "graduation": "Expected Graduation: {year}",
+    "languages": "Languages",
+    "frameworks": "Frameworks & 3D",
+    "workflow": "Tools & Workflow",
+    "viewAll": "View all projects"
+  },
+  "WorkProcess": {
+    "title": "How I work",
+    "understand": {
+      "title": "Understand",
+      "description": "I start by discussing the requirements and reviewing the design."
+    },
+    "build": {
+      "title": "Build",
+      "description": "I build the interface in reusable components and adapt it to different screen sizes."
+    },
+    "review": {
+      "title": "Review",
+      "description": "I check the interactions and layout, then work through the feedback."
+    },
+    "deliver": {
+      "title": "Deliver",
+      "description": "I prepare the build and document how to run and update the project."
+    }
+  },
+  "Email": {
+    "whatsapp": "WhatsApp",
+    "whatsappLabel": "Chat on WhatsApp: +963 949 381 491",
+    "copyLabel": "Copy email address",
+    "copy": "Copy",
+    "copied": "Copied!",
+    "retry": "Try again",
+    "success": "Email address copied.",
+    "failure": "Copy unavailable. Select the address below and copy it manually.",
+    "manual": "Email address to copy manually"
+  },
+  "Theme": {
+    "light": "Switch to light theme",
+    "dark": "Switch to dark theme"
+  },
+  "Portrait": {
+    "open": "View portrait fullscreen",
+    "close": "Close portrait viewer",
+    "view": "VIEW"
+  },
+  "Intro": {
+    "skip": "Skip introduction"
+  },
+  "CaseStudy": {
+    "back": "Back to Portfolio",
+    "goal": "Project goal:",
+    "type": "Project type",
+    "stack": "Stack",
+    "live": "See it live",
+    "gallery": "Project gallery",
+    "image": "{title} — gallery image {number}",
+    "code": "View source code",
+    "privateCode": "Source code is not publicly available.",
+    "original": "Original Kargul Studio website"
+  },
+  "NotFound": {
+    "title": "This page doesn't exist.",
+    "description": "You might have followed a broken link or mistyped the address. Either way, there's nothing here.",
+    "back": "Back to home",
+    "metadata": "Page not found"
+  },
+  "Metadata": {
+    "portfolio": "Portfolio"
+  },
+  "Portfolio": {
+    "eyebrow": "Selected work",
+    "title": "Portfolio",
+    "description": "Personal and learning projects in React, Next.js, animation, and 3D interaction.",
+    "projects": "All projects"
+  },
+  "Resume": {
+    "download": "Download CV",
+    "description": "Download my English CV as a PDF"
+  }
+}

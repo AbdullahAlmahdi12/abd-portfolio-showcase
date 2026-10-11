@@ -1,0 +1,14 @@
+node_modules/
+/.local/
+.next/
+out/
+test-results/
+playwright-report/
+*.tsbuildinfo
+.env*
+!.env.example
+/.amp/in/
+
+# Thmanyah usage permission does not establish public binary redistribution rights.
+public/fonts/thmanyah/
+*.otf

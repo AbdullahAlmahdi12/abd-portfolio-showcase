@@ -1,0 +1,283 @@
+{
+  "profile": {
+    "name": "Abdullah Al Mahdi",
+    "tagline": "I build responsive interfaces with React and Next.js, with an interest in motion and 3D on the web.",
+    "photo": {
+      "src": "/images/abdullah-portrait-light.webp",
+      "darkSrc": "/images/abdullah-portrait-dark.webp",
+      "alt": "Monochrome portrait of Abdullah Al Mahdi",
+      "source": "AI-styled studio portrait based on the owner's supplied photograph"
+    },
+    "about": [
+      "I'm a front-end developer based in Damascus. I work with React, Next.js, and TypeScript, and use GSAP and Three.js when a project calls for animation or 3D interaction.",
+      "Since 2023, I've worked independently on landing pages and UI prototypes for small businesses and student projects. I discuss requirements, work through feedback, and document the code for handover.",
+      "I'm completing a Bachelor of Information Technology at Syrian Virtual University and looking for junior front-end or software engineering opportunities. My personal projects give me room to practise responsive layouts, component structure, and browser interactions."
+    ],
+    "now": "I'm a freelance front-end developer and a fourth-year Information Technology student. My recent work focuses on React, Next.js, TypeScript, and interactive interfaces.",
+    "location": "Damascus, Syria",
+    "languages": "Arabic (Native), English (B1)",
+    "availability": "Open to front-end roles",
+    "available": true,
+    "email": "abdallahalmahdi12@gmail.com",
+    "emailLink": "mailto:abdallahalmahdi12@gmail.com",
+    "copyright": "© 2026 Abdullah Al Mahdi",
+    "socials": [
+      {
+        "label": "GitHub",
+        "href": "https://github.com/AbdullahAlmahdi12"
+      },
+      {
+        "label": "X",
+        "href": "https://x.com/Abd_Al_Mahdi"
+      },
+      {
+        "label": "LinkedIn",
+        "href": "https://www.linkedin.com/in/abdullah-al-mahdi-7628a0284/"
+      },
+      {
+        "label": "WhatsApp",
+        "href": "https://wa.me/963949381491"
+      }
+    ]
+  },
+  "tools": [
+    {
+      "name": "HTML5",
+      "category": "Languages"
+    },
+    {
+      "name": "CSS3",
+      "category": "Languages"
+    },
+    {
+      "name": "JavaScript (ES6+)",
+      "category": "Languages"
+    },
+    {
+      "name": "TypeScript",
+      "category": "Languages"
+    },
+    {
+      "name": "React.js",
+      "category": "Frameworks & 3D"
+    },
+    {
+      "name": "Next.js",
+      "category": "Frameworks & 3D"
+    },
+    {
+      "name": "Tailwind CSS",
+      "category": "Frameworks & 3D"
+    },
+    {
+      "name": "GSAP",
+      "category": "Frameworks & 3D"
+    },
+    {
+      "name": "Three.js",
+      "category": "Frameworks & 3D"
+    },
+    {
+      "name": "Framer Motion",
+      "category": "Frameworks & 3D"
+    },
+    {
+      "name": "Rive (web integration)",
+      "category": "Frameworks & 3D"
+    },
+    {
+      "name": "Git",
+      "category": "Tools & Workflow"
+    },
+    {
+      "name": "GitHub",
+      "category": "Tools & Workflow"
+    },
+    {
+      "name": "npm",
+      "category": "Tools & Workflow"
+    },
+    {
+      "name": "Vite",
+      "category": "Tools & Workflow"
+    },
+    {
+      "name": "Claude Code",
+      "category": "Tools & Workflow"
+    },
+    {
+      "name": "Codex",
+      "category": "Tools & Workflow"
+    },
+    {
+      "name": "AI-assisted development workflows",
+      "category": "Tools & Workflow"
+    },
+    {
+      "name": "Figma (reading designs)",
+      "category": "Tools & Workflow"
+    }
+  ],
+  "workHistory": [
+    {
+      "company": "Self-Employed",
+      "role": "Freelance Front-End Developer",
+      "startDate": "2023",
+      "endDate": "Present",
+      "location": "Remote",
+      "impacts": [
+        "Built responsive landing pages and UI prototypes for small businesses and student projects.",
+        "Discussed requirements with clients and revised interfaces based on their feedback.",
+        "Used Git branches to manage changes and documented project setup on GitHub."
+      ]
+    }
+  ],
+  "education": [
+    {
+      "institution": "Syrian Virtual University (SVU)",
+      "degree": "Bachelor of Information Technology (BAIT)",
+      "status": "4th Year",
+      "expectedGraduation": "2026 / 2027"
+    }
+  ],
+  "projects": [
+    {
+      "slug": "apple-iphone-3d-showcase",
+      "title": "Apple iPhone 3D Showcase",
+      "category": "3D Web Experience",
+      "summary": "A learning project combining an interactive iPhone model, finish and size controls, and a video highlights carousel.",
+      "description": [
+        "I implemented an Apple-inspired product page to practise React and 3D interaction. Visitors can rotate the iPhone model, change its finish, and switch between display sizes. The page also includes a video carousel with playback progress controls.",
+        "React state drives the viewer options. Three.js, React Three Fiber, and Drei handle the scene and orbit controls; GSAP coordinates the model transitions and video progress. Tailwind CSS handles the responsive layout.",
+        "This is a tutorial-based front-end project, not an Apple commission or an online store. Apple's product imagery and branding belong to their respective owners."
+      ],
+      "goal": "Connect React state to a 3D scene and coordinate product interaction with video and animation.",
+      "stack": "React, JavaScript, Vite, Tailwind CSS, GSAP, Three.js, React Three Fiber, Drei",
+      "liveLink": "https://abdullah-iphone-website.netlify.app/",
+      "cover": {
+        "src": "/images/projects/iphone-desktop.webp",
+        "alt": "iPhone showcase desktop hero with titanium product imagery",
+        "source": "https://abdullah-iphone-website.netlify.app/",
+        "contain": true
+      },
+      "gallery": [
+        {
+          "src": "/images/projects/iphone-desktop.webp",
+          "alt": "iPhone showcase desktop hero with titanium product imagery",
+          "source": "https://abdullah-iphone-website.netlify.app/",
+          "contain": true
+        },
+        {
+          "src": "/images/projects/iphone-mobile.webp",
+          "alt": "iPhone showcase mobile hero and purchase call to action",
+          "source": "https://abdullah-iphone-website.netlify.app/",
+          "contain": true
+        }
+      ]
+    },
+    {
+      "slug": "brain-wave-saas-landing-page",
+      "title": "Brain Wave — SaaS Landing Page",
+      "category": "SaaS Landing Page",
+      "summary": "A learning implementation of an AI product landing page, with reusable sections, mobile navigation, and parallax details.",
+      "description": [
+        "I implemented the Brainwave landing page as a tutorial-based project. Reusable React sections present benefits, integrations, service previews, pricing, and a roadmap. The design and artwork are not my original commercial work.",
+        "The mobile menu locks background scrolling while open. Tailwind CSS handles the layout, and React Just Parallax adds movement to the layered hero. The hero respects the reduced-motion preference.",
+        "The project is a presentation layer. It does not provide an AI service, authentication, or payments. My focus was component reuse and adapting the detailed layout to smaller screens."
+      ],
+      "goal": "Translate a detailed landing-page design into reusable React sections and responsive navigation.",
+      "stack": "React, JavaScript, Vite, Tailwind CSS, React Just Parallax, Scroll Lock",
+      "liveLink": "https://abdullah-brain-wave.netlify.app/",
+      "cover": {
+        "src": "/images/projects/brainwave-desktop.webp",
+        "alt": "Brain Wave desktop landing page with AI headline and robot imagery",
+        "source": "https://abdullah-brain-wave.netlify.app/",
+        "contain": true
+      },
+      "gallery": [
+        {
+          "src": "/images/projects/brainwave-desktop.webp",
+          "alt": "Brain Wave desktop landing page with AI headline and robot imagery",
+          "source": "https://abdullah-brain-wave.netlify.app/",
+          "contain": true
+        },
+        {
+          "src": "/images/projects/brainwave-mobile.webp",
+          "alt": "Brain Wave mobile landing page with responsive headline and navigation",
+          "source": "https://abdullah-brain-wave.netlify.app/",
+          "contain": true
+        }
+      ]
+    },
+    {
+      "slug": "hoobank-financial-platform-ui",
+      "title": "HooBank — Financial Platform UI",
+      "category": "Financial Platform UI",
+      "summary": "A finance-themed landing-page implementation with reusable feature cards, mobile navigation, and a dark Tailwind theme.",
+      "description": [
+        "I implemented the HooBank landing page as a front-end learning project. React sections cover the hero, features, billing, card offers, and testimonials. The displayed figures and testimonials are sample design content, not my business results.",
+        "Shared data supplies feature cards and navigation links. React state controls the mobile menu, while Tailwind CSS defines the typography, cyan accents, and responsive layout.",
+        "This project does not implement banking services or transactions. My work is the interface implementation; I do not claim ownership of the underlying design, branding, or artwork."
+      ],
+      "goal": "Build a consistent landing-page interface using reusable components and shared content data.",
+      "stack": "React, JavaScript, Tailwind CSS, Vite",
+      "liveLink": "https://abdullah-hoobank.netlify.app/",
+      "cover": {
+        "src": "/images/projects/hoobank-desktop.webp",
+        "alt": "HooBank desktop hero with cyan heading and payment card imagery",
+        "source": "https://abdullah-hoobank.netlify.app/",
+        "contain": true
+      },
+      "gallery": [
+        {
+          "src": "/images/projects/hoobank-desktop.webp",
+          "alt": "HooBank desktop hero with cyan heading and payment card imagery",
+          "source": "https://abdullah-hoobank.netlify.app/",
+          "contain": true
+        },
+        {
+          "src": "/images/projects/hoobank-mobile.webp",
+          "alt": "HooBank mobile hero with stacked heading and navigation menu",
+          "source": "https://abdullah-hoobank.netlify.app/",
+          "contain": true
+        }
+      ]
+    },
+    {
+      "slug": "abd-studio",
+      "title": "abd-studio",
+      "category": "Creative Website Recreation",
+      "summary": "A personal recreation of Kargul Studio's website, focused on responsive layout, animation, and an interactive image gallery.",
+      "description": [
+        "A personal front-end recreation of the Kargul Studio website, built for educational purposes to study creative development, interaction design, animation, and layout techniques. The original design and creative direction belong to Kargul Studio. I am not affiliated with the studio, and this was not client work.",
+        "I implemented the site with Next.js, TypeScript, and Tailwind CSS. Small interactive components handle the FAQ accordion, testimonial carousel, contact chooser, and category-filtered gallery with keyboard navigation and image zoom.",
+        "The Rive integration loads animations when they become visible, uses local WASM, and provides static fallbacks for reduced motion or load failure. Content records and asset descriptors are separate from the presentation components.",
+        "The studio's projects, team, testimonials, and metrics are reference content, not claims about my experience or results. The live recreation and original website are linked below."
+      ],
+      "goal": "Study a creative website by implementing its responsive layouts and browser interactions, with reduced-motion and static fallback handling.",
+      "stack": "Next.js, React, TypeScript, Tailwind CSS, Framer Motion, Rive",
+      "liveLink": "https://abd-studio.netlify.app/",
+      "originalLink": "https://kargul.studio/",
+      "cover": {
+        "src": "/images/projects/abd-studio-desktop.webp",
+        "alt": "abd-studio desktop recreation with studio headline and client-logo row",
+        "source": "https://abd-studio.netlify.app/",
+        "contain": true
+      },
+      "gallery": [
+        {
+          "src": "/images/projects/abd-studio-desktop.webp",
+          "alt": "abd-studio desktop recreation with studio headline and client-logo row",
+          "source": "https://abd-studio.netlify.app/",
+          "contain": true
+        },
+        {
+          "src": "/images/projects/abd-studio-mobile.webp",
+          "alt": "abd-studio mobile recreation with responsive studio headline and navigation",
+          "source": "https://abd-studio.netlify.app/",
+          "contain": true
+        }
+      ]
+    }
+  ]
+}
