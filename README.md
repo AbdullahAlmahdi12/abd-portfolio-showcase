@@ -4,7 +4,7 @@ A bilingual Next.js portfolio presenting my front-end implementation work, skill
 
 [Existing live portfolio](https://abdullah-almahdi-portfolio.netlify.app/) · [GitHub profile](https://github.com/AbdullahAlmahdi12)
 
-**Status:** public source showcase with fresh Git history. The link above is the original deployment, not a deployment of this edition. This edition uses a redistributable Arabic font; the original portfolio and its deployment are unchanged.
+**Status:** public source showcase with fresh Git history. The link above is the original deployment, not a deployment of this edition. Thmanyah is the preferred Arabic font when its licensed files are supplied privately; public checkouts use a bundled fallback. The original portfolio and its deployment are unchanged.
 
 ![English desktop home of the showcase edition](docs/images/portfolio-desktop.webp)
 
@@ -98,8 +98,22 @@ The browser suite covers project navigation, 404 responses, contact/clipboard be
 
 ## Fonts and attribution
 
-The original portfolio uses **Thmanyah / ثمانية with permission**. That permission has not been confirmed to cover public redistribution, so **Thmanyah's `.otf` files are not included in this repository or its Git history**. They are excluded from Git and are not required to build or run this edition.
+This portfolio uses **Thmanyah / ثمانية with permission** when its licensed files are supplied privately. Permission to redistribute the binaries in public GitHub source has not been confirmed, so **the `.otf` files are not included in this repository or its history**.
 
-This public edition instead bundles **Noto Sans Arabic**, loaded locally through `next/font/local`. Arabic text, RTL layouts, and language controls work without private font files, external font requests, or a font-service account. Noto Sans Arabic and Geist are distributed with their SIL Open Font License notices.
+To use Thmanyah, place your permitted copies of these five files in the ignored directory `.amp/in/private-fonts/thmanyah/`:
+
+```text
+thmanyahsans-Light.otf
+thmanyahsans-Regular.otf
+thmanyahsans-Medium.otf
+thmanyahsans-Bold.otf
+thmanyahsans-Black.otf
+```
+
+Next.js prepares the local font loader automatically before development, type generation, or a build. All five files select Thmanyah at weights 300, 400, 500, 700 and 900; an incomplete set produces an actionable error. Restart development or rebuild after changing the files. The generated loader is ignored, and the script does not copy fonts into `public/` or Git.
+
+Without those files, a fresh checkout builds with **Noto Sans Arabic**. This is a fallback, not a replacement for the owner's preferred typography. Both choices use `next/font/local`; Geist and the bundled Noto fallback include their SIL Open Font License notices.
+
+**Deployment distinction:** keeping fonts out of Git does not keep them out of a licensed-font build. Next.js bundles and serves Thmanyah from its generated assets when selected. Confirm that the intended web embedding/hosting is covered by your permission before publishing such a build, and do not upload private fonts or build archives to GitHub. No private font download URL is provided here.
 
 [Third-party notices](THIRD_PARTY_NOTICES.md) and the [asset inventory](docs/assets.md) explain design, screenshot, and font attribution. Public visibility does not grant a blanket license to template design, screenshots, portraits, or brand artwork.

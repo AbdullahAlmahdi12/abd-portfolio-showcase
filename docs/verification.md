@@ -1,6 +1,24 @@
 # Showcase verification
 
-## Local results — 11 October 2026
+## Current font selection
+
+Thmanyah is preferred when the complete permitted font set is supplied privately. The original public-source release below used Noto only; that is now the fallback for checkouts without those files.
+
+| Mode / check | Observed result |
+| --- | --- |
+| Owner's private-font build | Lint, typecheck, 3 content tests, build, and all 21 browser tests passed |
+| Fresh source-only checkout | `npm ci`, lint, typecheck, 3 content tests, build, and all 21 browser tests passed without private files |
+| Font-selection regression | Failed against the Noto-only build with private inputs present; passed after restoring preference for Thmanyah |
+| Browser font requests | Thmanyah assets loaded in the owner's build; Noto assets loaded in the source-only checkout |
+| Private input paths | Both the old public font URLs and `.amp/in/private-fonts/` URLs return HTTP 404 |
+| Selection edge cases | Missing files select Noto; partial inputs fail clearly; all five weights select Thmanyah; repeated preparation does not rewrite unchanged output |
+| Rendered typography | 18 private-font page renders across English/Arabic, desktop/mobile and light/dark states checked and representative screenshots inspected |
+
+The Thmanyah build contains generated font assets needed by browsers. Those assets were used only for local verification and were not uploaded to GitHub or deployed. Private inputs and the generated loader are ignored. The source-only build contains Geist and Noto, not Thmanyah.
+
+The isolated source-only checkout is nested under local scratch storage, so Next.js reported a multiple-lockfile workspace inference warning there. It did not prevent installation, compilation, or browser tests; no production configuration was changed to suppress a scratch-only warning.
+
+## Initial public-source release results — 11 October 2026
 
 Environment: Windows, Node.js 25.6.1, npm 11.12.1. The documented minimum is Node 22.18; the workflow selects Node 22. Linux/remote CI results are separate from this local record.
 
@@ -52,7 +70,7 @@ These tools run against this repository's source and lint configuration, not vis
 ## Release limits
 
 - This public edition starts with unrelated Git history. The font-containing candidate is preserved separately and privately; deleting fonts only in a later commit or force-pushing that existing GitHub repository would not ensure old cached objects were unavailable.
-- Thmanyah is excluded, not converted or hotlinked. The [asset notes](assets.md) retain template/reference-media attribution and reuse limitations. Secret scanning does not establish copyright permission.
+- Thmanyah binaries are excluded from public Git, not converted or hotlinked. Licensed-font builds still embed and serve those files through Next.js; deployment must comply with the relevant web-use permission. The [asset notes](assets.md) retain template/reference-media attribution and reuse limitations. Secret scanning does not establish copyright permission.
 - Remote CI evidence above applies to the linked source revision; workflow configuration alone is not evidence of a passing run.
 - No new public deployment or deployment-source migration is claimed. Update the canonical origin and links only after the actual approved deployment exists.
 - Browser coverage is Chromium, not a claim of testing every browser or assistive technology. No Lighthouse score or performance improvement is claimed.

@@ -1,5 +1,5 @@
 import { test, expect, type Page } from "@playwright/test";
-import { mkdirSync, readFileSync } from "node:fs";
+import { existsSync, mkdirSync, readFileSync } from "node:fs";
 import type { SiteContent } from "../src/content/types";
 
 const site: SiteContent = JSON.parse(readFileSync("src/content/site.json", "utf8"));
@@ -201,7 +201,7 @@ test("project pages explain source availability in both languages", async ({ pag
   }
 });
 
-test("Arabic typography loads a bundled font without serving private font files", async ({ page, request }) => {
+test("Arabic typography prefers privately supplied Thmanyah without exposing the input directory", async ({ page, request }) => {
   const fonts: string[] = [];
   page.on("response", response => {
     if (response.request().resourceType() === "font") fonts.push(response.url());
@@ -215,9 +215,14 @@ test("Arabic typography loads a bundled font without serving private font files"
     return [...document.fonts].some(font => font.family.replaceAll('"', "") === family && font.status === "loaded");
   })).toBe(true);
   expect(fonts.length).toBeGreaterThan(0);
-  expect(fonts.every(url => !/\.otf(?:\?|$)|thmanyah/i.test(url))).toBe(true);
+  const weights = ["Light", "Regular", "Medium", "Bold", "Black"];
+  const hasThmanyah = weights.every(weight => existsSync(`.amp/in/private-fonts/thmanyah/thmanyahsans-${weight}.otf`));
+  expect(fonts.some(url => /thmanyahsans/i.test(url))).toBe(hasThmanyah);
+  expect(fonts.some(url => /NotoSansArabic/i.test(url))).toBe(!hasThmanyah);
   for (const weight of ["Light", "Regular", "Medium", "Bold", "Black"]) {
     const response = await request.get(`/fonts/thmanyah/thmanyahsans-${weight}.otf`);
     expect(response.status()).toBe(404);
+    const privateResponse = await request.get(`/.amp/in/private-fonts/thmanyah/thmanyahsans-${weight}.otf`);
+    expect(privateResponse.status()).toBe(404);
   }
 });

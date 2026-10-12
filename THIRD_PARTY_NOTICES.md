@@ -8,7 +8,7 @@ The layout was informed by a supplied Framer portfolio. Abdullah Al Mahdi's cont
 
 - **Geist:** distributed with the original [SIL Open Font License notice](public/fonts/geist-OFL.txt). Preserve that notice when distributing the font.
 - **Noto Sans Arabic:** Copyright 2022 The Noto Project Authors. The unmodified variable font is distributed under [SIL Open Font License 1.1](public/fonts/noto-sans-arabic/OFL.txt). Preserve its copyright and license notice when distributing the font. The pinned upstream source is recorded in [the asset inventory](docs/assets.md).
-- **Thmanyah / ثمانية:** used with permission in the original portfolio, but not included in this public edition. Permission to redistribute its binaries publicly has not been confirmed; this repository supplies no Thmanyah font files, conversions, download links, or license grant.
+- **Thmanyah / ثمانية:** the owner's preferred Arabic font, used with permission when privately supplied. Its binaries are not included in public Git source; no font download, conversion, or license grant is supplied. A Thmanyah build embeds and serves the privately supplied font through Next.js, so its deployment must comply with the applicable web-use permission. Without the files, the project uses the bundled Noto fallback.
 
 ## Project screenshots and descriptions
 

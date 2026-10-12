@@ -12,3 +12,6 @@ playwright-report/
 # Thmanyah usage permission does not establish public binary redistribution rights.
 public/fonts/thmanyah/
 *.otf
+
+# Prepared from privately supplied fonts, or the bundled public fallback.
+src/app/arabic-font.generated.ts
