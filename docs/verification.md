@@ -1,5 +1,11 @@
 # Showcase verification
 
+## Current checks
+
+`npm run check` runs lint, typecheck, and a production build. The test suite, Playwright configuration, and GitHub Actions workflow have been removed from this edition at the owner's request.
+
+The results below are historical records from earlier revisions, not instructions for running the current repository or evidence of a new CI run.
+
 ## Current font selection
 
 Thmanyah is preferred when the complete permitted font set is supplied privately. The original public-source release below used Noto only; that is now the fallback for checkouts without those files.

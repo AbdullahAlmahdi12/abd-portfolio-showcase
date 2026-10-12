@@ -46,7 +46,7 @@ No active image path was removed just to hide an unresolved permission question.
 
 The owner has permission to use ثمانية, but has not confirmed permission to redistribute the binaries in public GitHub source. Do not commit, convert, or add public download links to those files. Keep private contracts and correspondence outside Git.
 
-Excluding the inputs from Git does not exclude them from a compiled Thmanyah build: Next.js emits font assets that browsers must receive to display the font. Confirm that a deployment is covered by the relevant web embedding/hosting permission before publishing that build. No private-font deployment or build archive upload is performed by the public-source release workflow; GitHub CI uses the Noto fallback because it has no private font files.
+Excluding the inputs from Git does not exclude them from a compiled Thmanyah build: Next.js emits font assets that browsers must receive to display the font. Confirm that a deployment is covered by the relevant web embedding/hosting permission before publishing that build. Earlier GitHub CI runs used the Noto fallback because they had no private font files; that workflow has since been removed. No private-font deployment or build archive upload is claimed here.
 
 The supplied-template terms and underlying reference-project artwork terms have not been independently established. This record identifies uncertainty, not a finding of infringement. Screenshots remain attributed implementation documentation, not an unrestricted asset pack; check the applicable terms before reusing or distributing the depicted designs separately.
 
