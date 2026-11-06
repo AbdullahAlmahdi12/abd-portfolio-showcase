@@ -13,7 +13,7 @@ export async function generateMetadata({params}: Props): Promise<Metadata> {
   const project = getProject(locale, slug);
   if (!project) notFound();
   const t = await getTranslations({locale, namespace: "Metadata"});
-  return {title: `${project.title} — ${t("portfolio")}`, description: project.summary, alternates: localeAlternates(locale, `/portfolio/${slug}`)};
+  return {title: `${project.title} — ${t("portfolio")}`, description: project.summary, alternates: localeAlternates(locale, `/projects/${slug}`)};
 }
 export default async function ProjectPage({params}: Props) {
   const {locale, slug} = await params;

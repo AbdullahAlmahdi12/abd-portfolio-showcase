@@ -69,7 +69,7 @@ export function HomeContent({content}: {content: SiteContent}) {
       <section id="portfolio" className="home-section portfolio-section content-width" aria-labelledby="portfolio-heading">
         <h2 id="portfolio-heading" className="section-heading" data-reveal>{t("portfolio")}</h2>
         <div className="portfolio-grid">{projects.map(project => <ProjectCard key={project.slug} project={project} />)}</div>
-        <Link href="/portfolio" className="portfolio-all-link" data-reveal>{t("viewAll")}</Link>
+        <Link href="/projects" className="portfolio-all-link" data-reveal>{t("viewAll")}</Link>
       </section>
 
       <section className="home-section content-width" aria-labelledby="history-heading">

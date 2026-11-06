@@ -2,7 +2,7 @@
   "Navigation": {
     "label": "Main navigation",
     "home": "Home",
-    "portfolio": "Portfolio",
+    "portfolio": "Projects",
     "contact": "Contact",
     "openMenu": "Open navigation menu",
     "closeMenu": "Close navigation menu",
@@ -17,7 +17,7 @@
   "Sections": {
     "about": "About",
     "skills": "Skills & Tools",
-    "portfolio": "Portfolio",
+    "portfolio": "Projects",
     "history": "Work History",
     "education": "Education",
     "graduation": "Expected Graduation: {year}",
@@ -69,7 +69,7 @@
     "skip": "Skip introduction"
   },
   "CaseStudy": {
-    "back": "Back to Portfolio",
+    "back": "Back to Projects",
     "goal": "Project goal:",
     "type": "Project type",
     "stack": "Stack",
@@ -87,11 +87,11 @@
     "metadata": "Page not found"
   },
   "Metadata": {
-    "portfolio": "Portfolio"
+    "portfolio": "Projects"
   },
   "Portfolio": {
     "eyebrow": "Selected work",
-    "title": "Portfolio",
+    "title": "Projects",
     "description": "Personal and learning projects in React, Next.js, animation, and 3D interaction.",
     "projects": "All projects"
   },

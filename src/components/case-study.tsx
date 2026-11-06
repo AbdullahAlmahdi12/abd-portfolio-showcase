@@ -8,7 +8,7 @@ export function CaseStudy({ project }: { project: Project }) {
   const t = useTranslations("CaseStudy");
   return (
     <main id="main-content" className="case-study">
-      <Link className="back-link" href="/portfolio">{t("back")}</Link>
+      <Link className="back-link" href="/projects">{t("back")}</Link>
       <div className="case-introduction">
         <p className="project-meta" data-reveal>{project.category}</p>
         <h1 className="case-title" data-reveal><LocalizedText text={project.title} /></h1>
@@ -35,7 +35,7 @@ export function CaseStudy({ project }: { project: Project }) {
         </div>
         {!project.repositoryLink && <p className="text-secondary case-narrow" data-reveal>{t("privateCode")}</p>}
       </div>
-      <Link className="back-link lower-back" href="/portfolio">{t("back")}</Link>
+      <Link className="back-link lower-back" href="/projects">{t("back")}</Link>
     </main>
   );
 }

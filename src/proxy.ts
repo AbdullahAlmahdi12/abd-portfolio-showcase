@@ -3,7 +3,7 @@ import { NextRequest, NextResponse } from "next/server";
 import { routing } from "./i18n/routing";
 import content from "@/content/site.json";
 const middleware = createMiddleware(routing);
-const paths = new Set(["/", "/portfolio", "/404", ...content.projects.map(project => `/portfolio/${project.slug}`)]);
+const paths = new Set(["/", "/projects", "/404", ...content.projects.map(project => `/projects/${project.slug}`)]);
 export default function proxy(request: NextRequest) {
   const pathname = request.nextUrl.pathname.replace(/\/$/, "") || "/";
   const locale = pathname === "/ar" || pathname.startsWith("/ar/") ? "ar" : "en";

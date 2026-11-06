@@ -76,7 +76,7 @@ function ContactNavigation({ name, email, emailLink, whatsappHref, pathname }: H
         </div>
         <div className="header-links" id="header-navigation">
           <Link href="/" aria-current={pathname === "/" ? "page" : undefined} onClick={navigateHome}>{t("home")}</Link>
-          <Link href="/portfolio" aria-current={pathname.startsWith("/portfolio") ? "page" : undefined} onClick={() => {setOpen(false); setContactOpen(false);}}>{t("portfolio")}</Link>
+          <Link href="/projects" aria-current={pathname.startsWith("/projects") ? "page" : undefined} onClick={() => {setOpen(false); setContactOpen(false);}}>{t("portfolio")}</Link>
           <LanguageSwitcher />
         </div>
         <div className="header-tools">

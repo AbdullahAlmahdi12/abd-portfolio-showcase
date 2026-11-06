@@ -5,7 +5,7 @@ import type { Project } from "@/content/types";
 
 export function ProjectCard({ project }: { project: Project }) {
   return (
-    <Link className="project-card" href={`/portfolio/${project.slug}`} data-reveal data-view-cursor aria-label={project.title}>
+    <Link className="project-card" href={`/projects/${project.slug}`} data-reveal data-view-cursor aria-label={project.title}>
       <div className="project-cover">
         <Image src={project.cover.src} alt={project.cover.alt} fill sizes="(max-width: 809px) calc(100vw - 48px), (max-width: 1199px) calc((100vw - 96px) / 2), 416px" />
         <span className="project-arrow" aria-hidden="true">

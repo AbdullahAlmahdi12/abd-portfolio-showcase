@@ -12,10 +12,10 @@ export async function generateMetadata({params}: Props): Promise<Metadata> {
   const {locale} = await params;
   if (!isLocale(locale)) notFound();
   const t = await getTranslations({locale, namespace: "Portfolio"});
-  return {title: `${t("title")} — ${getSiteContent(locale).profile.name}`, description: t("description"), alternates: localeAlternates(locale, "/portfolio")};
+  return {title: `${t("title")} — ${getSiteContent(locale).profile.name}`, description: t("description"), alternates: localeAlternates(locale, "/projects")};
 }
 
-export default async function PortfolioPage({params}: Props) {
+export default async function ProjectsPage({params}: Props) {
   const {locale} = await params;
   if (!isLocale(locale)) notFound();
   setRequestLocale(locale);
