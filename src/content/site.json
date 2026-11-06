@@ -98,10 +98,6 @@
       "category": "Tools & Workflow"
     },
     {
-      "name": "Vite",
-      "category": "Tools & Workflow"
-    },
-    {
       "name": "Claude Code",
       "category": "Tools & Workflow"
     },
@@ -111,10 +107,6 @@
     },
     {
       "name": "AI-assisted development workflows",
-      "category": "Tools & Workflow"
-    },
-    {
-      "name": "Figma (reading designs)",
       "category": "Tools & Workflow"
     }
   ],
