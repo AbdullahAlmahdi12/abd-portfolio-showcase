@@ -19,7 +19,15 @@ export async function generateMetadata({params}: {params: Promise<{locale: strin
   const {locale} = await params;
   if (!isLocale(locale)) notFound();
   const {profile} = getSiteContent(locale);
-  return {title: profile.name, description: profile.tagline, metadataBase: new URL(siteOrigin), alternates: localeAlternates(locale)};
+  const image = {url: new URL("/images/abdullah-portrait-share.jpg", siteOrigin).href, width: 1024, height: 1024, alt: profile.photo.alt};
+  return {
+    title: profile.name,
+    description: profile.tagline,
+    metadataBase: new URL(siteOrigin),
+    alternates: localeAlternates(locale),
+    openGraph: {type: "website", images: [image]},
+    twitter: {card: "summary", images: [image]},
+  };
 }
 export default async function LocaleLayout({children, params}: {children: React.ReactNode; params: Promise<{locale: string}>}) {
   const {locale} = await params;
@@ -30,7 +38,11 @@ export default async function LocaleLayout({children, params}: {children: React.
   const t = await getTranslations("Navigation");
   const clientMessages = Object.fromEntries(["Navigation", "Email", "Theme", "Portrait", "Intro", "Resume"].map(key => [key, messages[key]]));
   return <html lang={locale} dir={locale === "ar" ? "rtl" : "ltr"} className={`${geist.variable} ${arabic.variable}`} suppressHydrationWarning>
-    <head><script dangerouslySetInnerHTML={{__html: themeInitScript}} /></head>
+    <head>
+      <link rel="icon" type="image/png" sizes="64x64" href="/images/favicon-light.png?v=2" media="(prefers-color-scheme: light)" data-theme-icon="light" />
+      <link rel="icon" type="image/png" sizes="64x64" href="/images/favicon-dark.png?v=2" media="(prefers-color-scheme: dark)" data-theme-icon="dark" />
+      <script dangerouslySetInnerHTML={{__html: themeInitScript}} />
+    </head>
     <body><NextIntlClientProvider messages={clientMessages}>
       <a className="skip-link" href="#main-content">{t("skipContent")}</a>
       <Intro name={profile.name} locale={locale}>

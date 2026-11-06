@@ -1,6 +1,6 @@
 "use client";
 
-import { useSyncExternalStore } from "react";
+import { useEffect, useSyncExternalStore } from "react";
 import { useTranslations } from "next-intl";
 
 const themeEvent = "portfolio:theme-change";
@@ -25,6 +25,12 @@ export function ThemeToggle() {
   const t = useTranslations("Theme");
   const theme = useSyncExternalStore(subscribe, currentTheme, () => "light");
   const next = theme === "dark" ? "light" : "dark";
+
+  useEffect(() => {
+    document.querySelectorAll<HTMLLinkElement>("link[data-theme-icon]").forEach(icon => {
+      icon.media = icon.dataset.themeIcon === theme ? "all" : "not all";
+    });
+  }, [theme]);
 
   function toggle() {
     document.documentElement.dataset.theme = next;

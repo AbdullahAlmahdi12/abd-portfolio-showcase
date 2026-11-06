@@ -369,6 +369,7 @@ main { scroll-margin-top: 88px; }
 @media (prefers-reduced-motion: no-preference) {
   .page-transition { animation: page-enter .55s cubic-bezier(.96,-.02,.38,1.01); }
   /* One initial timeline: navbar, hero, then About, staggered by 150ms. */
+  .site-sequence:not([data-intro-phase="navigated"]) { overflow-anchor: none; }
   .site-sequence:not([data-intro-phase="navigated"]) .page-transition { animation: none; }
   .site-sequence:is([data-intro-phase="playing"], [data-intro-phase="finished"]) .site-header,
   .site-sequence:is([data-intro-phase="playing"], [data-intro-phase="finished"]) .case-study,
