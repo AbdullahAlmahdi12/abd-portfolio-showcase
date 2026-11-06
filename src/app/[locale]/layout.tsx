@@ -7,7 +7,7 @@ import { Footer } from "@/components/footer";
 import { MotionController } from "@/components/motion-controller";
 import { ProjectViewCursor } from "@/components/project-view-cursor";
 import { Intro } from "@/components/intro";
-import { themeInitScript } from "@/lib/theme";
+import { faviconPaths, themeInitScript } from "@/lib/theme";
 import { getSiteContent } from "@/content";
 import { isLocale, routing } from "@/i18n/routing";
 import { localeAlternates, siteOrigin } from "@/i18n/metadata";
@@ -39,9 +39,11 @@ export default async function LocaleLayout({children, params}: {children: React.
   const clientMessages = Object.fromEntries(["Navigation", "Email", "Theme", "Portrait", "Intro", "Resume"].map(key => [key, messages[key]]));
   return <html lang={locale} dir={locale === "ar" ? "rtl" : "ltr"} className={`${geist.variable} ${arabic.variable}`} suppressHydrationWarning>
     <head>
-      <link rel="icon" type="image/png" sizes="64x64" href="/images/favicon-light.png?v=2" media="(prefers-color-scheme: light)" data-theme-icon="light" />
-      <link rel="icon" type="image/png" sizes="64x64" href="/images/favicon-dark.png?v=2" media="(prefers-color-scheme: dark)" data-theme-icon="dark" />
       <script dangerouslySetInnerHTML={{__html: themeInitScript}} />
+      <noscript>
+        <link rel="icon" type="image/png" sizes="64x64" href={faviconPaths.light} media="(prefers-color-scheme: light)" />
+        <link rel="icon" type="image/png" sizes="64x64" href={faviconPaths.dark} media="(prefers-color-scheme: dark)" />
+      </noscript>
     </head>
     <body><NextIntlClientProvider messages={clientMessages}>
       <a className="skip-link" href="#main-content">{t("skipContent")}</a>

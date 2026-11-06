@@ -1,7 +1,8 @@
 "use client";
 
-import { useEffect, useSyncExternalStore } from "react";
+import { useSyncExternalStore } from "react";
 import { useTranslations } from "next-intl";
+import { updateThemeFavicon } from "@/lib/theme";
 
 const themeEvent = "portfolio:theme-change";
 
@@ -13,11 +14,15 @@ function currentTheme(): "light" | "dark" {
 
 function subscribe(listener: () => void) {
   const media = matchMedia("(prefers-color-scheme: dark)");
-  media.addEventListener("change", listener);
-  window.addEventListener(themeEvent, listener);
+  function onChange() {
+    updateThemeFavicon(currentTheme());
+    listener();
+  }
+  media.addEventListener("change", onChange);
+  window.addEventListener(themeEvent, onChange);
   return () => {
-    media.removeEventListener("change", listener);
-    window.removeEventListener(themeEvent, listener);
+    media.removeEventListener("change", onChange);
+    window.removeEventListener(themeEvent, onChange);
   };
 }
 
@@ -26,14 +31,9 @@ export function ThemeToggle() {
   const theme = useSyncExternalStore(subscribe, currentTheme, () => "light");
   const next = theme === "dark" ? "light" : "dark";
 
-  useEffect(() => {
-    document.querySelectorAll<HTMLLinkElement>("link[data-theme-icon]").forEach(icon => {
-      icon.media = icon.dataset.themeIcon === theme ? "all" : "not all";
-    });
-  }, [theme]);
-
   function toggle() {
     document.documentElement.dataset.theme = next;
+    updateThemeFavicon(next);
     try { localStorage.setItem("portfolio-theme", next); } catch { /* In-memory choice still works when storage is blocked. */ }
     window.dispatchEvent(new Event(themeEvent));
   }
